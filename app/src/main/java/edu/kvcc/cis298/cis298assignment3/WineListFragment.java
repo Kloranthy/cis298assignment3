@@ -70,7 +70,33 @@ class WineListFragment
 		{
 			mWine = wine;
 
-			mNumberTextView.setText( mWine + "" );
+			mNumberTextView.setText(
+				mWine.getNumber()
+										  );
+			mDescriptionTextView.setText(
+				mWine.getDescription()
+												 );
+
+			mPackSizeTextView.setText(
+				mWine.getPackSize()
+											 );
+
+			mCasePriceTextView.setText(
+				mWine.getCasePrice()
+											  );
+
+			String isActiveResult;
+			if ( mWine.isActive() )
+			{
+				isActiveResult = "True"; // todo convert to string resource
+			}
+			else
+			{
+				isActiveResult = "False";
+			}
+			mActiveTextView.setText(
+				isActiveResult
+										  );
 		}
 	}
 
