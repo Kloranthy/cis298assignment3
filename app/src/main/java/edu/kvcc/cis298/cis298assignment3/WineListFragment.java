@@ -2,7 +2,10 @@ package edu.kvcc.cis298.cis298assignment3;
 
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +27,69 @@ class WineListFragment
 		mWineAdapter;
 
 	// public methods
+
+	@Override
+	public
+	void onCreate(
+		@Nullable
+		Bundle savedInstanceState
+					 )
+	{
+		super.onCreate( savedInstanceState );
+	}
+
+	@Nullable
+	@Override
+	public
+	View onCreateView(
+		LayoutInflater inflater,
+		@Nullable
+		ViewGroup container,
+		@Nullable
+		Bundle savedInstanceState
+						  )
+	{
+		View view = inflater.inflate(
+			R.layout.fragment_wine_list,
+			container,
+			false
+											 );
+
+		mRecyclerView = (RecyclerView)
+		view.findViewById(
+			R.id.fragment_wine_list_recycler_view
+							  );
+
+		mRecyclerView.setLayoutManager(
+			new LinearLayoutManager(
+				getActivity()
+			)
+												);
+
+		if(savedInstanceState != null)
+		{
+			// retrieve stuff from bundle
+		}
+		updateUI();
+		return view;
+	}
+
 	// private methods
+	private void updateUI()
+	{
+		WineCollection wineCollection = WineCollection.getInstance( getActivity() );
+		// get list of wines from wine collection
+		//List<Wine> wines = wineCollection.getWines();
+		if(mWineAdapter == null)
+		{
+			//mWineAdapter = new WineAdapter( wines );
+		}
+		else
+		{
+			//mWineAdapter.setWines(wines);
+			//mWineAdapter.notifyDataSetChanged();
+		}
+	}
 
 	// private classes
 	private
@@ -51,6 +116,28 @@ class WineListFragment
 		public WineHolder(View viewItem)
 		{
 			super(viewItem);
+
+			viewItem.setOnClickListener( this );
+
+			mNumberTextView = (TextView) viewItem.findViewById(
+				R.id.list_item_wine_number
+																			  );
+
+			mDescriptionTextView = (TextView) viewItem.findViewById(
+			R.id.list_item_wine_description
+														 );
+
+			mPackSizeTextView = (TextView) viewItem.findViewById(
+				R.id.list_item_wine_pack_size
+																					 );
+
+			mCasePriceTextView = (TextView) viewItem.findViewById(
+				R.id.list_item_wine_case_price
+																					 );
+
+			mActiveTextView = (TextView) viewItem.findViewById(
+				R.id.list_item_wine_active
+																					 );
 		}
 
 		// public methods
@@ -161,7 +248,7 @@ class WineListFragment
 		}
 
 		public
-		void setCrimes(
+		void setWines(
 			List<Wine> wines
 						  )
 		{
