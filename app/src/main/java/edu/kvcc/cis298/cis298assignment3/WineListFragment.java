@@ -49,16 +49,19 @@ class WineListFragment
 		Bundle savedInstanceState
 						  )
 	{
-		View view = inflater.inflate(
+		View
+			view
+			= inflater.inflate(
 			R.layout.fragment_wine_list,
 			container,
 			false
-											 );
+									);
 
-		mRecyclerView = (RecyclerView)
-		view.findViewById(
-			R.id.fragment_wine_list_recycler_view
-							  );
+		mRecyclerView
+			= (RecyclerView)
+			view.findViewById(
+				R.id.fragment_wine_list_recycler_view
+								  );
 
 		mRecyclerView.setLayoutManager(
 			new LinearLayoutManager(
@@ -66,7 +69,8 @@ class WineListFragment
 			)
 												);
 
-		if(savedInstanceState != null)
+		if ( savedInstanceState
+			  != null )
 		{
 			// retrieve stuff from bundle
 		}
@@ -75,12 +79,16 @@ class WineListFragment
 	}
 
 	// private methods
-	private void updateUI()
+	private
+	void updateUI()
 	{
-		WineCollection wineCollection = WineCollection.getInstance( getActivity() );
+		WineCollection
+			wineCollection
+			= WineCollection.getInstance( getActivity() );
 		// get list of wines from wine collection
 		//List<Wine> wines = wineCollection.getWines();
-		if(mWineAdapter == null)
+		if ( mWineAdapter
+			  == null )
 		{
 			//mWineAdapter = new WineAdapter( wines );
 		}
@@ -99,45 +107,57 @@ class WineListFragment
 	{
 		// private variables
 		// model variables
-		private Wine mWine;
+		private Wine
+			mWine;
 		// view variables
 		private
-		TextView mNumberTextView;
+		TextView
+			mNumberTextView;
 		private
-		TextView mDescriptionTextView;
+		TextView
+			mDescriptionTextView;
 		private
-		TextView mPackSizeTextView;
+		TextView
+			mPackSizeTextView;
 		private
-		TextView mCasePriceTextView;
+		TextView
+			mCasePriceTextView;
 		private
-		TextView mActiveTextView;
+		TextView
+			mActiveTextView;
 
 		// public constructors
-		public WineHolder(View viewItem)
+		public
+		WineHolder( View viewItem )
 		{
-			super(viewItem);
+			super( viewItem );
 
 			viewItem.setOnClickListener( this );
 
-			mNumberTextView = (TextView) viewItem.findViewById(
+			mNumberTextView
+				= (TextView) viewItem.findViewById(
 				R.id.list_item_wine_number
-																			  );
+															 );
 
-			mDescriptionTextView = (TextView) viewItem.findViewById(
-			R.id.list_item_wine_description
-														 );
+			mDescriptionTextView
+				= (TextView) viewItem.findViewById(
+				R.id.list_item_wine_description
+															 );
 
-			mPackSizeTextView = (TextView) viewItem.findViewById(
+			mPackSizeTextView
+				= (TextView) viewItem.findViewById(
 				R.id.list_item_wine_pack_size
-																					 );
+															 );
 
-			mCasePriceTextView = (TextView) viewItem.findViewById(
+			mCasePriceTextView
+				= (TextView) viewItem.findViewById(
 				R.id.list_item_wine_case_price
-																					 );
+															 );
 
-			mActiveTextView = (TextView) viewItem.findViewById(
+			mActiveTextView
+				= (TextView) viewItem.findViewById(
 				R.id.list_item_wine_active
-																					 );
+															 );
 		}
 
 		// public methods
@@ -153,9 +173,10 @@ class WineListFragment
 		}
 
 		public
-		void bindWine(Wine wine)
+		void bindWine( Wine wine )
 		{
-			mWine = wine;
+			mWine
+				= wine;
 
 			mNumberTextView.setText(
 				mWine.getNumber()
@@ -172,14 +193,17 @@ class WineListFragment
 				mWine.getCasePrice()
 											  );
 
-			String isActiveResult;
+			String
+				isActiveResult;
 			if ( mWine.isActive() )
 			{
-				isActiveResult = "True"; // todo convert to string resource
+				isActiveResult
+					= "True"; // todo convert to string resource
 			}
 			else
 			{
-				isActiveResult = "False";
+				isActiveResult
+					= "False";
 			}
 			mActiveTextView.setText(
 				isActiveResult
@@ -202,7 +226,8 @@ class WineListFragment
 			List<Wine> wines
 					  )
 		{
-			mWines = wines;
+			mWines
+				= wines;
 		}
 
 		// public methods
@@ -211,7 +236,7 @@ class WineListFragment
 		WineHolder onCreateViewHolder(
 			ViewGroup parent,
 			int viewType
-												)
+											  )
 		{
 			LayoutInflater
 				layoutInflater
@@ -250,9 +275,10 @@ class WineListFragment
 		public
 		void setWines(
 			List<Wine> wines
-						  )
+						 )
 		{
-			mWines = wines;
+			mWines
+				= wines;
 		}
 	}
 }

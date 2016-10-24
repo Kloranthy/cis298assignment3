@@ -17,14 +17,27 @@ class Wine
 		mIsActive;
 
 	// public methods
-	public Wine(int number, String description, int packSize, int casePrice, boolean isActive)
+	public
+	Wine(
+		int number,
+		String description,
+		int packSize,
+		int casePrice,
+		boolean isActive
+		 )
 	{
-		mNumber = number;
-		mDescription = description;
-		mPackSize = packSize;
-		mCasePrice = casePrice;
-		mIsActive = isActive;
+		mNumber
+			= number;
+		mDescription
+			= description;
+		mPackSize
+			= packSize;
+		mCasePrice
+			= casePrice;
+		mIsActive
+			= isActive;
 	}
+
 	public
 	int getNumber()
 	{

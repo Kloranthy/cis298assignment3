@@ -11,7 +11,8 @@ class WineCollection
 	/**
 	 * singleton instance
 	 */
-	private static WineCollection instance;
+	private static WineCollection
+		instance;
 
 	private String
 		TAG
@@ -23,6 +24,20 @@ class WineCollection
 		context;
 
 	// public methods
+
+	/**
+	 * singleton constructor
+	 *
+	 * @param context
+	 */
+	private
+	WineCollection( Context context )
+	{
+		this.context
+			= context.getApplicationContext();
+		// database stuff?
+	}
+
 	/**
 	 * singleton access
 	 *
@@ -30,35 +45,30 @@ class WineCollection
 	 * @return WineCollection
 	 */
 	public static
-	WineCollection getInstance(Context
-											context)
+	WineCollection getInstance(
+		Context
+			context
+									  )
 	{
-		if(instance == null)
+		if ( instance
+			  == null )
 		{
-			instance = new WineCollection(context);
+			instance
+				= new WineCollection( context );
 		}
 		return instance;
 	}
 
+	// private methods
+
 	/**
 	 * TODO implement
+	 *
 	 * @return List<Wine>
 	 */
 	public
 	List<Wine> getWines()
 	{
 		return null;
-	}
-
-	// private methods
-	/**
-	 * singleton constructor
-	 *
-	 * @param context
-	 */
-	private WineCollection(Context context)
-	{
-		this.context = context.getApplicationContext();
-		// database stuff?
 	}
 }

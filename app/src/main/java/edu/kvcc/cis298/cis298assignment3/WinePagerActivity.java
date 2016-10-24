@@ -23,7 +23,7 @@ class WinePagerActivity
 	public static
 	Intent newIntent(
 		Context packageContext
-		)
+						 )
 	{
 		Intent
 			intent

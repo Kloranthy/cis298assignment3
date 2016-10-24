@@ -13,7 +13,7 @@ class SingleFragmentActivity
 	// public methods
 	@Override
 	public
-	void onCreate(Bundle savedInstanceState )
+	void onCreate( Bundle savedInstanceState )
 	{
 		super.onCreate( savedInstanceState );
 		setContentView( R.layout.activity_fragment );
