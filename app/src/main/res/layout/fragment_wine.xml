@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android = "http://schemas.android.com/apk/res/android"
+	android:orientation = "vertical"
+	android:layout_width = "match_parent"
+	android:layout_height = "match_parent"
+	>
+	<TextView
+		android:id = "@+id/fragment_wine_number_text_view"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		/>
+	<TextView
+		android:id = "@+id/fragment_wine_description_text_view"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		/>
+	<TextView
+		android:id = "@+id/fragment_wine_pack_size_text_view"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		/>
+	<TextView
+		android:id = "@+id/fragment_wine_case_price_text_view"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		/>
+	<TextView
+		android:id = "@+id/fragment_wine_active_text_view"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		/>
+
+</LinearLayout >
