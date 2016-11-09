@@ -1,4 +1,4 @@
-package edu.kvcc.cis298.cis298assignment3;
+package edu.kvcc.cis298.cis298assignment3.view;
 
 
 import android.content.Intent;
@@ -13,6 +13,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.List;
+
+import edu.kvcc.cis298.cis298assignment3.R;
+import edu.kvcc.cis298.cis298assignment3.WineCollection;
+import edu.kvcc.cis298.cis298assignment3.WinePagerActivity;
+import edu.kvcc.cis298.cis298assignment3.model.Wine;
 
 public
 class WineListFragment

@@ -3,6 +3,9 @@ package edu.kvcc.cis298.cis298assignment3;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
+import edu.kvcc.cis298.cis298assignment3.interfaces.SingleFragmentActivity;
+import edu.kvcc.cis298.cis298assignment3.view.WineListFragment;
+
 public
 class WineActivity
 	extends SingleFragmentActivity
@@ -20,6 +23,6 @@ class WineActivity
 	protected
 	Fragment createFragment()
 	{
-		return null;
+		return new WineListFragment();
 	}
 }

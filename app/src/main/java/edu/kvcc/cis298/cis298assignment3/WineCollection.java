@@ -4,6 +4,8 @@ import android.content.Context;
 
 import java.util.List;
 
+import edu.kvcc.cis298.cis298assignment3.model.Wine;
+
 public
 class WineCollection
 {
@@ -24,20 +26,6 @@ class WineCollection
 		context;
 
 	// public methods
-
-	/**
-	 * singleton constructor
-	 *
-	 * @param context
-	 */
-	private
-	WineCollection( Context context )
-	{
-		this.context
-			= context.getApplicationContext();
-		// database stuff?
-	}
-
 	/**
 	 * singleton access
 	 *
@@ -59,8 +47,6 @@ class WineCollection
 		return instance;
 	}
 
-	// private methods
-
 	/**
 	 * TODO implement
 	 *
@@ -70,5 +56,29 @@ class WineCollection
 	List<Wine> getWines()
 	{
 		return null;
+	}
+
+	/**
+	 * TODO implement
+	 *
+	 * @return Wine the specified wine or null
+	 */
+	public Wine getWine(int number)
+	{
+		return null;
+	}
+
+	// private methods
+	/**
+	 * singleton constructor
+	 *
+	 * @param context
+	 */
+	private
+	WineCollection( Context context )
+	{
+		this.context
+			= context.getApplicationContext();
+		// database stuff?
 	}
 }

@@ -6,6 +6,8 @@ import android.support.v4.view.ViewPager;
 
 import java.util.List;
 
+import edu.kvcc.cis298.cis298assignment3.model.Wine;
+
 public
 class WinePagerActivity
 {
