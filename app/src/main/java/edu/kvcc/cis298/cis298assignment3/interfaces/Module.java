@@ -11,15 +11,13 @@ class Module
 	private   String
 		mName;
 	private   ModuleState
-		mState;
+		mModuleState;
 
 	public
 	Module( String name )
 	{
 		mName
 			= name;
-		mModuleLocator
-			= ModuleLocator.getInstance();
 	}
 
 	public

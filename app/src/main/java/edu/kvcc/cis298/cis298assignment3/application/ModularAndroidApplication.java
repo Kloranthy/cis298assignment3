@@ -60,7 +60,7 @@ class ModularAndroidApplication
 		Event
 			event
 			= new PauseApplicationEvent();
-		mApplicationController.handleEvent(event);
+		mApplicationController.handleEvent( event );
 	}
 
 	@Override
@@ -70,7 +70,7 @@ class ModularAndroidApplication
 		Event
 			event
 			= new ResumeApplicationEvent();
-		mApplicationController.handleEvent(event);
+		mApplicationController.handleEvent( event );
 	}
 
 	@Override
@@ -80,7 +80,7 @@ class ModularAndroidApplication
 		Event
 			event
 			= new StopApplicationEvent();
-		mApplicationController.handleEvent(event);
+		mApplicationController.handleEvent( event );
 	}
 
 	@Override
@@ -90,6 +90,6 @@ class ModularAndroidApplication
 		Event
 			event
 			= new DestroyApplicationEvent();
-		mApplicationController.handleEvent(event);
+		mApplicationController.handleEvent( event );
 	}
 }
