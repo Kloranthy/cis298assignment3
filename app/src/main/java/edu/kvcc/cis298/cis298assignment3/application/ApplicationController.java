@@ -1,9 +1,9 @@
 package edu.kvcc.cis298.cis298assignment3.application;
 
 
-import edu.kvcc.cis298.cis298assignment3.application.tasks.InitializeApplicationTask;
-import edu.kvcc.cis298.cis298assignment3.event.Event;
-import edu.kvcc.cis298.cis298assignment3.interfaces.Controller;
+import edu.kvcc.cis298.cis298assignment3.implementations.tasks.InitializeApplicationTask;
+import edu.kvcc.cis298.cis298assignment3.abstractions.event.controller.Event;
+import edu.kvcc.cis298.cis298assignment3.abstractions.controller.Controller;
 import edu.kvcc.cis298.cis298assignment3.task.Task;
 
 public

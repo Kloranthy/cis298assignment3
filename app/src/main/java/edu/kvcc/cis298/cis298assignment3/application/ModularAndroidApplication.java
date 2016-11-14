@@ -8,7 +8,7 @@ import edu.kvcc.cis298.cis298assignment3.application.events.PauseApplicationEven
 import edu.kvcc.cis298.cis298assignment3.application.events.ResumeApplicationEvent;
 import edu.kvcc.cis298.cis298assignment3.application.events.StartApplicationEvent;
 import edu.kvcc.cis298.cis298assignment3.application.events.StopApplicationEvent;
-import edu.kvcc.cis298.cis298assignment3.event.Event;
+import edu.kvcc.cis298.cis298assignment3.abstractions.event.controller.Event;
 import edu.kvcc.cis298.cis298assignment3.interfaces.ModularApplication;
 import edu.kvcc.cis298.cis298assignment3.module.ModuleLocator;
 

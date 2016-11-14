@@ -1,4 +1,4 @@
-package edu.kvcc.cis298.cis298assignment3.application.tasks;
+package edu.kvcc.cis298.cis298assignment3.implementations.tasks;
 
 import edu.kvcc.cis298.cis298assignment3.interfaces.Module;
 import edu.kvcc.cis298.cis298assignment3.module.ModuleLocator;

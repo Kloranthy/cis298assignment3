@@ -1,6 +1,6 @@
-package edu.kvcc.cis298.cis298assignment3.event;
+package edu.kvcc.cis298.cis298assignment3.abstractions.event.controller;
 
-public
+public abstract
 class Event
 {
 	private String mName;

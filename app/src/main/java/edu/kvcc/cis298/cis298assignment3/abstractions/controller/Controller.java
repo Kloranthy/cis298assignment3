@@ -1,7 +1,7 @@
-package edu.kvcc.cis298.cis298assignment3.interfaces;
+package edu.kvcc.cis298.cis298assignment3.abstractions.controller;
 
 import edu.kvcc.cis298.cis298assignment3.application.ApplicationState;
-import edu.kvcc.cis298.cis298assignment3.event.Event;
+import edu.kvcc.cis298.cis298assignment3.abstractions.event.controller.Event;
 
 public
 interface Controller
